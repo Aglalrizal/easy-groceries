@@ -1,0 +1,132 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.left-section {
+    flex: 1;
+    background: url('/images/background-image.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    color: white;
+}
+
+.left-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.left-section p {
+    font-size: 1.5rem;
+}
+
+.left-section span {
+    color: white;
+    font-weight: bold;
+}
+
+.right-section {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2d3436;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #DDF1D6;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    color: #2d3436;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #00cec9;
+}
+
+.login-btn img {
+    margin-right: 0.5rem;
+    height: 24px;
+}
+
+.login-box p {
+    margin-top: 1.5rem;
+    color: #636e72;
+}
+
+.login-box a {
+    color: #00b894;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Agar logo dan teks sejajar secara vertikal */
+    gap: 1rem; /* Jarak antara logo dan teks */
+    margin-bottom: 2rem; /* Jarak dengan konten di bawahnya */
+}
+
+.logo {
+    width: 100px; /* Ukuran logo */
+}
+
+.title {
+    font-size: 1.8rem; /* Ukuran teks title */
+    color: white; /* Warna teks */
+    font-weight: bold;
+}
