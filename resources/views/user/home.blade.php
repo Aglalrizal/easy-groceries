@@ -110,7 +110,7 @@
                 <i class="fas fa-shopping-cart text-3xl">
                 </i>
                 <p class="mt-2 text-lg font-semibold">
-                    Keranjang Pesanan
+                    Belanja
                 </p>
             </a>
             </div>

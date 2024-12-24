@@ -57,20 +57,6 @@
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="bg-green-100 p-4 rounded-lg shadow-md">
-                <img alt="Wortel" class="w-full h-40 object-cover rounded-md mb-4" height="200"
-                    src="{{ asset('images/products/wortel-img.png') }}"
-                    width="300" />
-                <h3 class="text-xl font-bold mb-2">
-                    Wortel
-                </h3>
-                <p>
-                    Wortel merupakan sayuran berwarna oranye yang banyak digemari, karena rasanya yang enak dan manfaat
-                    wortel yang melimpah. Wortel bisa dimakan mentah, direbus, atau digoreng, dibuat jus, atau campuran
-                    puding.
-                </p>
-            </div>
-            
-            <div class="bg-green-100 p-4 rounded-lg shadow-md">
                 <img alt="Bayam" class="w-full h-40 object-cover rounded-md mb-4" height="200"
                     src="{{ asset('images/products/bayam-img.png') }}"
                     width="300" />

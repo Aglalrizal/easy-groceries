@@ -35,7 +35,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
+        dd($request);
         $data = $request->validate([
             "name" =>"required|unique:products,name|max:1000|string",
             "price" =>"required|integer",

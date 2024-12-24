@@ -15,7 +15,7 @@
     <div class="flex items-center justify-center min-h-screen">
         <div class="w-full max-w-md mx-auto p-6">
             <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold">Login</h1>
+                <h1 class="text-3xl font-bold">Register</h1>
             </div>
             <form action="{{ route('daftar') }}" method="POST">
                 @csrf
