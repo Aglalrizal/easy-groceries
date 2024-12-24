@@ -53,7 +53,7 @@
     <!-- Main Content -->
     <main class="p-4">
         <h2 class="text-2xl font-bold mb-4">
-            Ayo pilih pelatihanmu!
+            Mari bergabung dengan komunitas dan bangun jaringan!
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -69,11 +69,9 @@
                         </span>
                     </div>
                     <h3 class="text-xl font-bold mb-2">
-                        Benihemat
+                        Hidroponik Asik
                     </h3>
-                    <a class="text-green-600" href="#">
-                        Lihat komunitas
-                    </a>
+                    <a href="https://chat.whatsapp.com/LW0YWxyCLUT16aIMo2pEi1" target="_blank" rel="noopener noreferrer" class="text-green-500">Lihat Komunitas</a>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -89,11 +87,9 @@
                         </span>
                     </div>
                     <h3 class="text-xl font-bold mb-2">
-                        Grocery Savvy
+                        Komunitas Murah-Murah
                     </h3>
-                    <a class="text-green-600" href="#">
-                        Lihat komunitas
-                    </a>
+                    <a href="https://chat.whatsapp.com/FDh1iI9D59c85iwBXuiYKw" target="_blank" rel="noopener noreferrer" class="text-green-500">Lihat Komunitas</a>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -109,11 +105,9 @@
                         </span>
                     </div>
                     <h3 class="text-xl font-bold mb-2">
-                        GroceryPro
+                        Barter Seger
                     </h3>
-                    <a class="text-green-600" href="#">
-                        Lihat komunitas
-                    </a>
+                    <a href="https://chat.whatsapp.com/IxxPZCRPzUvKfMdB9V2bmx" target="_blank" rel="noopener noreferrer" class="text-green-500">Lihat Komunitas</a>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -129,11 +123,9 @@
                         </span>
                     </div>
                     <h3 class="text-xl font-bold mb-2">
-                        Grocery 101
+                        Belanja bareng yuk!
                     </h3>
-                    <a class="text-green-600" href="#">
-                        Lihat komunitas
-                    </a>
+                    <a href="https://chat.whatsapp.com/EyVMGIz8hJe6LJ22YSXKMd" target="_blank" rel="noopener noreferrer" class="text-green-500">Lihat Komunitas</a>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
@@ -149,35 +141,12 @@
                         </span>
                     </div>
                     <h3 class="text-xl font-bold mb-2">
-                        Grocery Savvy
+                        Tips pilih buah dan sayuran
                     </h3>
-                    <a class="text-green-600" href="#">
-                        Lihat komunitas
-                    </a>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                <img alt="People shopping at a fish market" class="w-full h-48 object-cover" height="400"
-                    src="https://storage.googleapis.com/a1aa/image/lw5bLV3H6Ma1CN7eeu6cqiXa1orfQOSldQDNVWKXtNojH1unA.jpg"
-                    width="600" />
-                <div class="p-4">
-                    <div class="flex items-center text-gray-600 mb-2">
-                        <i class="fas fa-users mr-2">
-                        </i>
-                        <span>
-                            32 anggota
-                        </span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">
-                        GroceryPro
-                    </h3>
-                    <a class="text-green-600" href="#">
-                        Lihat komunitas
-                    </a>
+                    <a href="https://chat.whatsapp.com/LW0YWxyCLUT16aIMo2pEi1" target="_blank" rel="noopener noreferrer" class="text-green-500">Lihat Komunitas</a>
                 </div>
             </div>
         </div>
     </main>
 </body>
-
 </html>

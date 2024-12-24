@@ -35,45 +35,45 @@
     </header>    
     <!-- Main Content -->
     <main class="container mx-auto mt-8 px-6 flex-grow flex justify-center items-center">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <a href="{{ route('product.index') }}">
                 <div class="bg-green-100 p-6 rounded-lg shadow-md flex flex-col items-center">
-                    <img alt="Manage Ingredients icon" class="h-16 mb-4" height="100"
-                        src="https://storage.googleapis.com/a1aa/image/eCzivZGh9b2sUCPdJPSv4DTfIK4CBv0AeNoytpwf3DFIsYcPB.jpg"
+                    <img alt="Manage Ingredients icon" class="h-16 mb-4" height="200"
+                        src="{{ asset('/images/trolly.png') }}"
                         width="100" />
                     <span class="text-lg font-semibold text-gray-800">
                         Kelola Bahan
                     </span>
                 </div>
             </a>
-            <a href="{{ route('daftar') }}">
+            <a href="{{ route('admin.riwayat') }}">
                 <div class="bg-green-100 p-6 rounded-lg shadow-md flex flex-col items-center">
                     <img alt="Order Notes icon" class="h-16 mb-4" height="100"
-                        src="https://storage.googleapis.com/a1aa/image/LQEZDPPuIeSYESPdkS6D0STURI9a49Ns3IZZTcP6tkQjFj7JA.jpg"
+                        src="{{ asset('/images/list.png') }}"
                         width="100" />
                     <span class="text-lg font-semibold text-gray-800">
-                        Catatan Pesanan
+                        Pesanan
                     </span>
                 </div>
             </a>
             <a href="{{ route('laporan') }}">
                 <div class="bg-green-100 p-6 rounded-lg shadow-md flex flex-col items-center">
                     <img alt="Report icon" class="h-16 mb-4" height="100"
-                        src="https://storage.googleapis.com/a1aa/image/CfeZnuexfQYmVSImf8uIkn4CqeE6O09wv7FvEX37VQVxwix9E.jpg"
+                        src="{{ asset('/images/doc.png') }}"
                         width="100" />
                     <span class="text-lg font-semibold text-gray-800">
                         Laporan
                     </span>
                 </div>
             </a>
-            <div class="bg-green-100 p-6 rounded-lg shadow-md flex flex-col items-center">
+            {{-- <div class="bg-green-100 p-6 rounded-lg shadow-md flex flex-col items-center">
                 <img alt="Customer icon" class="h-16 mb-4" height="100"
                     src="https://storage.googleapis.com/a1aa/image/2Gp7FMxMgbI9E5XMNUMZegVbKVDW31XnKdYeXUbqJfJCWMunA.jpg"
                     width="100" />
                 <span class="text-lg font-semibold text-gray-800">
                     Pelanggan
                 </span>
-            </div>
+            </div> --}}
         </div>
     </main>
     <!-- Footer -->

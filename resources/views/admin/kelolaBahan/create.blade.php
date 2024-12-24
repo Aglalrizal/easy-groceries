@@ -16,7 +16,7 @@
     <header class="bg-white shadow-md">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center">
-                <a href="{{ route('product.index') }}">
+                <a href="{{ route('admin.home') }}">
                     <i class="fas fa-arrow-left text-2xl">
                     </i>
                 </a>
@@ -27,11 +27,25 @@
                 </span>
             </div>
             <div class="flex items-center">
-                <i class="fas fa-headset text-2xl">
+                {{-- <div class="relative">
+                    <input class="border border-green-500 rounded-full py-2 px-4 pl-10 focus:outline-none"
+                        placeholder="Cari..." type="text" />
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-green-500">
+                    </i>
+                </div> --}}
+                <i class="fas fa-headset text-2xl ml-6">
                 </i>
                 <span class="ml-2">
                     Toko 5A
                 </span>
+                <div class="ml-4 relative">
+                    <button class="flex items-center px-2 py-1 border rounded-md hover:bg-gray-200">
+                        <a href="/logout" class="block px-4 py-2 text-red-600 hover:bg-gray-100"
+                            onclick="return confirm('Are you sure?')">
+                            <i class="fas fa-power-off"></i>
+                        </a>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -83,7 +97,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="price" name="price" placeholder="Masukkan harga produk Anda" type="text"
+                            id="price" name="price" placeholder="Masukkan harga produk Anda" type="number"
                             value="{{ old('price', $product->price ?? "") }}" />
                         @error('price')
                         <span class="text-red-500">{{ $message }}</span>
@@ -106,9 +120,22 @@
                             <label class="block text-gray-700 text-sm font-bold mb-2" for="unit" name="unit">
                                 Satuan
                             </label>
-                            <input
+                            <select
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="unit" name="unit" type="text" value="{{ old('unit', $product->unit ?? 'Buah' )}}" />
+                                id="unit" name="unit" onchange="toggleOtherUnitInput()">
+                                <option value="Buah" {{ old('unit', $product->unit ?? 'Buah') == 'Buah' ? 'selected' : '' }}>Buah</option>
+                                <option value="Ikat" {{ old('unit', $product->unit ?? 'Buah') == 'Ikat' ? 'selected' : '' }}>Ikat</option>
+                                <option value="Kg" {{ old('unit', $product->unit ?? 'Buah') == 'Kg' ? 'selected' : '' }}>Kg</option>
+                                <option value="Lt" {{ old('unit', $product->unit ?? 'Buah') == 'Lt' ? 'selected' : '' }}>Lt</option>
+                                <option value="Other" {{ old('unit', $product->unit ?? 'Buah') == 'Other' ? 'selected' : '' }}>Other</option>
+                            </select>
+                        
+                            <div id="otherUnitDiv" style="display: {{ old('unit', $product->unit ?? 'Buah') == 'Other' ? 'block' : 'none' }};">
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="otherUnit" name="unit" type="text" value="{{ old('unit', $product->unit ?? '') }}" />
+                            </div>
+                        
                             @error('unit')
                             <span class="text-red-500">{{ $message }}</span>
                             @enderror
@@ -172,7 +199,16 @@
                 reader.readAsDataURL(input.files[0]); // Membaca file gambar sebagai URL Data
             }
         }
+        function toggleOtherUnitInput() {
+            var select = document.getElementById("unit");
+            var otherUnitDiv = document.getElementById("otherUnitDiv");
 
+            if (select.value == "Other") {
+                otherUnitDiv.style.display = "block";
+            } else {
+                otherUnitDiv.style.display = "none";
+            }
+        }
     </script>
 </body>
 

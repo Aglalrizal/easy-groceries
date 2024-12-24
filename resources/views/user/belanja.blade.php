@@ -6,6 +6,8 @@
     <title>
         EasyGroceries
     </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.tailwindcss.com">
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -47,8 +49,10 @@
                     <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-green-500">
                     </i>
                 </div> --}}
-                <i class="fas fa-shopping-cart text-2xl ml-6">
-                </i>
+                <a href="{{ route('cart') }}">
+                    <i class="fas fa-shopping-cart text-2xl ml-6">
+                    </i>
+                </a>
                 <i class="fas fa-user text-2xl ml-6">
                 </i>
                 <span class="ml-2">
@@ -66,39 +70,54 @@
     </header>
     <!-- Main Content -->
     <main class="container mx-auto py-8 px-6">
+        @if(session('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+        </div>
+        @endif
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            @foreach($products as $product)
             <div class="bg-green-100 rounded-lg p-4 shadow-md">
-                <img alt="Bunch of carrots" class="w-full h-40 object-cover mb-4" height="200"
-                    src="https://storage.googleapis.com/a1aa/image/QtfNaffyNAe6RT6emBdxBkNNMGivlp3lXCfVfVf1WALpEXT3TA.jpg"
-                    width="200" />
+                <img alt="{{ $product->name }} segar" class="w-full h-40 object-cover mb-4"
+                    src="{{ asset('images/products/'.$product->image) }}" />
                 <h2 class="text-xl font-bold">
-                    Wortel
+                    {{ $product->name }}
                 </h2>
                 <h3 class="text-l font-bold">
-                    Tersedia 123 buah
+                    Tersedia {{ $product->stock }}  {{ $product->unit }} buah
                 </h3>
                 <p class="text-gray-600">
-                    Rp3.000/buah
+                    Rp. {{ number_format($product->price) }}/ {{ $product->unit }}
                 </p>
                 <div class="flex items-center justify-between mt-4">
                     <div class="flex items-center">
-                        <button class="bg-gray-200 text-gray-700 px-2 py-1 rounded-l"
-                            onclick="updateValue('wortel-input', -1)">
+                        <form action="/cart/add/{{ $product->id }}" method="post">
+                        @csrf
+                        <button type="button" class="bg-gray-200 text-gray-700 px-2 py-1 rounded-l"
+                            onclick="updateValue('{{ $product->slug }}-input', -1)">
                             -
                         </button>
-                        <input class="w-12 text-center border border-gray-300" id="wortel-input" type="text"
-                            value="0" />
-                        <button class="bg-gray-200 text-gray-700 px-2 py-1 rounded-r"
-                            onclick="updateValue('wortel-input', 1)">
+                        <input hidden type="text"
+                            value="{{ $product->id }}" name="product_id"/>
+                        <input class="w-12 text-center border border-gray-300" id="{{ $product->slug }}-input" type="text"
+                            value="0" name="qty"/>
+                        <button type="button" class="bg-gray-200 text-gray-700 px-2 py-1 rounded-r"
+                            onclick="updateValue('{{ $product->slug }}-input', 1)">
                             +
                         </button>
                     </div>
-                    <i class="fas fa-shopping-basket text-green-500">
-                    </i>
+                        <button type="submit">
+                            <i class="fas fa-shopping-basket text-green-500"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
+            @endforeach
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

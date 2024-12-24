@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
+        'address'
     ];
 
     /**
@@ -32,6 +34,11 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+    public function cartItems()
+    {
+        return $this->hasMany(Cart::class);
+    }
+
 
     /**
      * Get the attributes that should be cast.

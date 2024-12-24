@@ -24,10 +24,20 @@
                 </span>
             </div>
             <div class="flex items-center">
-                <i class="fas fa-user text-2xl">
+                {{-- <div class="relative">
+                    <input class="border border-green-500 rounded-full py-2 px-4 pl-10 focus:outline-none"
+                        placeholder="Cari..." type="text" />
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-green-500">
+                    </i>
+                </div> --}}
+                <a href="{{ route('cart') }}">
+                    <i class="fas fa-shopping-cart text-2xl ml-6">
+                    </i>
+                </a>
+                <i class="fas fa-user text-2xl ml-6">
                 </i>
                 <span class="ml-2">
-                    {{ Auth::user()->name }}
+                    {{ @Auth::user()->name }}
                 </span>
                 <div class="ml-4 relative">
                     <button class="flex items-center px-2 py-1 border rounded-md hover:bg-gray-200">
@@ -40,7 +50,7 @@
         </div>
     </header>
     <!-- Main Content -->
-    <main class="container mx-auto mt-8 px-6">
+    <main class="container mx-auto mt-6 px-6">
         <h1 class="text-4xl font-bold text-gray-900 mb-3">
             Selamat Datang, {{ @Auth::user()->name }} !
         </h1>
@@ -96,7 +106,7 @@
 
         <div class="mt-8 flex justify-center space-x-4">
             <div class="bg-green-500 text-white text-center py-4 px-6 rounded-lg w-1/3">
-                <a href="{{ route('catalog') }}">
+                <a href="{{ route('belanja') }}">
                 <i class="fas fa-shopping-cart text-3xl">
                 </i>
                 <p class="mt-2 text-lg font-semibold">
@@ -105,11 +115,11 @@
             </a>
             </div>
             <div class="bg-green-500 text-white text-center py-4 px-6 rounded-lg w-1/3">
-                <a href="{{ route('course') }}">
+                <a href="{{ route('community') }}">
                 <i class="fas fa-file-alt text-3xl">
                 </i>
                 <p class="mt-2 text-lg font-semibold">
-                    Pelatihan
+                    Komunitas
                 </p>
             </a>
             </div>
@@ -119,6 +129,15 @@
                 </i>
                 <p class="mt-2 text-lg font-semibold">
                     Info Pangan
+                </p>
+            </a>
+            </div>
+            <div class="bg-green-500 text-white text-center py-4 px-6 rounded-lg w-1/3">
+                <a href="{{ route('riwayat') }}">
+                <i class="fas fa-history text-3xl">
+                </i>
+                <p class="mt-2 text-lg font-semibold">
+                    Riwayat Pesanan
                 </p>
             </a>
             </div>

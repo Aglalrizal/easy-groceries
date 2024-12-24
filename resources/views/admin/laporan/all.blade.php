@@ -27,50 +27,51 @@
                 </span>
             </div>
             <div class="flex items-center">
-                <i class="fas fa-headset text-2xl">
+                {{-- <div class="relative">
+                    <input class="border border-green-500 rounded-full py-2 px-4 pl-10 focus:outline-none"
+                        placeholder="Cari..." type="text" />
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-green-500">
+                    </i>
+                </div> --}}
+                <i class="fas fa-headset text-2xl ml-6">
                 </i>
                 <span class="ml-2">
                     Toko 5A
                 </span>
+                <div class="ml-4 relative">
+                    <button class="flex items-center px-2 py-1 border rounded-md hover:bg-gray-200">
+                        <a href="/logout" class="block px-4 py-2 text-red-600 hover:bg-gray-100"
+                            onclick="return confirm('Are you sure?')">
+                            <i class="fas fa-power-off"></i>
+                        </a>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
     <main class="p-4">
         <section>
             <h2 class="text-xl font-bold">
-                Laporan
+                Penjualan 
             </h2>
-            <p class="text-lg">
-                November 2024
-            </p>
             <div class="flex flex-wrap justify-center mt-4 space-x-4">
                 <div class="flex items-center p-4 bg-green-100 rounded-lg shadow-md">
                     <div>
                         <p class="text-2xl font-bold">
-                            Rp45.000.000
+                            Rp{{ number_format($totalAmount)}}
                         </p>
                         <p>
                             Total Pemasukan
-                        </p>
-                    </div>
-                    <div class="ml-4 p-2 bg-yellow-200 rounded-full">
-                        <p class="text-xl font-bold">
-                            +50%
                         </p>
                     </div>
                 </div>
                 <div class="flex items-center p-4 bg-green-100 rounded-lg shadow-md">
                     <div>
                         <p class="text-2xl font-bold">
-                            5000 Produk
+                            {{ $totalProducts }} Produk
                         </p>
                         <p>
                             Total Pesanan
-                        </p>
-                    </div>
-                    <div class="ml-4 p-2 bg-yellow-200 rounded-full">
-                        <p class="text-xl font-bold">
-                            +42%
                         </p>
                     </div>
                 </div>
@@ -90,109 +91,36 @@
                             Nama produk
                         </th>
                         <th class="p-2 text-left">
-                            Total stok
+                            Stok Tersedia
                         </th>
                         <th class="p-2 text-left">
-                            Satuan
+                            Terjual
                         </th>
                         <th class="p-2 text-left">
-                            Detail
+                            Total Penjualan
                         </th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($productSales as $item)
                     <tr class="border-t">
                         <td class="p-2">
-                            01
+                            {{ $loop->iteration }}
                         </td>
                         <td class="p-2">
-                            Wortel
+                            {{ $item['name'] }}
                         </td>
                         <td class="p-2">
-                            46
+                            {{ $item['stock'] }}
                         </td>
                         <td class="p-2">
-                            Buah
+                            {{ $item['sold'] }}
                         </td>
                         <td class="p-2">
-                            <i class="fas fa-ellipsis-v">
-                            </i>
+                            Rp. {{ number_format($item['total_sales']) }}
                         </td>
                     </tr>
-                    <tr class="border-t">
-                        <td class="p-2">
-                            02
-                        </td>
-                        <td class="p-2">
-                            Bayam
-                        </td>
-                        <td class="p-2">
-                            55
-                        </td>
-                        <td class="p-2">
-                            Ikat
-                        </td>
-                        <td class="p-2">
-                            <a href="{{ route('laporan-detail') }}">
-                                <i class="fas fa-ellipsis-v text-green-600">
-                                </i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="border-t">
-                        <td class="p-2">
-                            03
-                        </td>
-                        <td class="p-2">
-                            Jagung
-                        </td>
-                        <td class="p-2">
-                            60
-                        </td>
-                        <td class="p-2">
-                            Buah
-                        </td>
-                        <td class="p-2">
-                            <i class="fas fa-ellipsis-v">
-                            </i>
-                        </td>
-                    </tr>
-                    <tr class="border-t">
-                        <td class="p-2">
-                            04
-                        </td>
-                        <td class="p-2">
-                            Kangkung
-                        </td>
-                        <td class="p-2">
-                            42
-                        </td>
-                        <td class="p-2">
-                            Ikat
-                        </td>
-                        <td class="p-2">
-                            <i class="fas fa-ellipsis-v">
-                            </i>
-                        </td>
-                    </tr>
-                    <tr class="border-t">
-                        <td class="p-2">
-                            05
-                        </td>
-                        <td class="p-2">
-                            Timun
-                        </td>
-                        <td class="p-2">
-                            75
-                        </td>
-                        <td class="p-2">
-                            Buah
-                        </td>
-                        <td class="p-2">
-                            <i class="fas fa-ellipsis-v">
-                            </i>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </section>

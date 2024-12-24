@@ -44,9 +44,9 @@ class AuthController extends Controller
             // Redirect URL berdasarkan peran pengguna
             $redirectUrl = $this->getRedirectUrlBasedOnRole($user->role);
             return redirect($redirectUrl);
+        } else {
+            return redirect(route('login'))->with('error', 'Login gagal');
         }
-
-        return response()->json(['message' => 'Unauthorized'], 401);
     }
 
     public function logout(Request $request)
@@ -55,7 +55,7 @@ class AuthController extends Controller
         return redirect(route('login.index'));
     }
 
-    private function getRedirectUrlBasedOnRole($role)
+    public function getRedirectUrlBasedOnRole($role)
     {
         switch ($role) {
             case 'admin':
@@ -66,5 +66,19 @@ class AuthController extends Controller
             default:
                 return url('/user/home');
         }
+    }
+    public function home(){
+        if(Auth::check()){
+            $role = Auth::user()->role;
+            switch ($role) {
+                case 'admin':
+                    return redirect(route(name: 'admin.home'));
+                case 'vendor':
+                    return redirect(route(name: 'vendor.home'));
+                case 'user':
+                    return redirect(route(name: 'user.home'));
+            }
+        }
+        else return redirect('/login');
     }
 }

@@ -17,4 +17,11 @@ class Product extends Model
         "image",
         "unit",
     ];
+    public function cartItems()
+    {
+        return $this->hasMany(Cart::class);
+    }
+    public function orderItems(){
+        return $this->hasMany(OrderItem::class);
+    }
 }

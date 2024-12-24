@@ -58,7 +58,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="bg-green-100 p-4 rounded-lg shadow-md">
                 <img alt="Wortel" class="w-full h-40 object-cover rounded-md mb-4" height="200"
-                    src="https://storage.googleapis.com/a1aa/image/ZEEnE0lgi961F5fkSqyvGTACmTTAbrLJ3t9ABhusXzPMYt7JA.jpg"
+                    src="{{ asset('images/products/wortel-img.png') }}"
                     width="300" />
                 <h3 class="text-xl font-bold mb-2">
                     Wortel
@@ -69,88 +69,95 @@
                     puding.
                 </p>
             </div>
+            
             <div class="bg-green-100 p-4 rounded-lg shadow-md">
-                <img alt="Kubis" class="w-full h-40 object-cover rounded-md mb-4" height="200"
-                    src="https://storage.googleapis.com/a1aa/image/aeSHz8U58s01KCpXFljepaGALLK9aapggZFNfKI8Ysn3g1unA.jpg"
+                <img alt="Bayam" class="w-full h-40 object-cover rounded-md mb-4" height="200"
+                    src="{{ asset('images/products/bayam-img.png') }}"
                     width="300" />
                 <h3 class="text-xl font-bold mb-2">
-                    Kubis
+                    Bayam
                 </h3>
                 <p>
-                    Kubis atau Kol adalah tumbuhan dwimusim atau ekamusim berdaun hijau atau ungu yang ditanam sebagai
-                    sayuran untuk kepala padat berdaunnya.
+                    Bayam adalah sayuran hijau yang kaya akan zat besi dan sangat baik untuk kesehatan. Bayam sering
+                    digunakan dalam berbagai hidangan seperti sup, tumisan, atau dijadikan lalapan.
                 </p>
             </div>
-            <div class="bg-green-100 p-4 rounded-lg shadow-md">
-                <img alt="Mentimun" class="w-full h-40 object-cover rounded-md mb-4" height="200"
-                    src="https://storage.googleapis.com/a1aa/image/eFRFn0U9LBWsDizqV1rKoxo0oooMsxC2fwHQE4l7MAudwa3TA.jpg"
-                    width="300" />
-                <h3 class="text-xl font-bold mb-2">
-                    Mentimun
-                </h3>
-                <p>
-                    Mentimun, timun, atau ketimun (Cucumis sativus) merupakan tumbuhan yang menghasilkan buah yang dapat
-                    dimakan. Buahnya biasanya dipanen ketika belum masak benar untuk dijadikan sayuran atau penyegar,
-                    tergantung jenisnya.
-                </p>
-            </div>
-            <div class="bg-green-100 p-4 rounded-lg shadow-md">
-                <img alt="Jagung" class="w-full h-40 object-cover rounded-md mb-4" height="200"
-                    src="https://storage.googleapis.com/a1aa/image/wxpFXe8MiBy6FiFBhpha7k3SwS8TP3ohyh2KrumKQYcIYt7JA.jpg"
-                    width="300" />
-                <h3 class="text-xl font-bold mb-2">
-                    Jagung
-                </h3>
-                <p>
-                    Jagung (Zea mays ssp. mays) adalah salah satu tanaman pangan penghasil karbohidrat yang terpenting
-                    di dunia, selain gandum dan padi.
-                </p>
-            </div>
-            <div class="bg-green-100 p-4 rounded-lg shadow-md">
-                <img alt="Kangkung" class="w-full h-40 object-cover rounded-md mb-4" height="200"
-                    src="https://storage.googleapis.com/a1aa/image/gZGS9tbBqUrmF501XSWfCtuNg46fmOM6fZh1WdMW8WRsg1unA.jpg"
-                    width="300" />
-                <h3 class="text-xl font-bold mb-2">
-                    Kangkung
-                </h3>
-                <p>
-                    Kangkung (Ipomoea aquatica) adalah tumbuhan yang termasuk jenis sayur-sayuran dan ditanam sebagai
-                    makanan.
-                </p>
-            </div>
+            
             <div class="bg-green-100 p-4 rounded-lg shadow-md">
                 <img alt="Brokoli" class="w-full h-40 object-cover rounded-md mb-4" height="200"
-                    src="https://storage.googleapis.com/a1aa/image/ZxgeJiZCeGvfooiWjsj8owXyY5S4wEWfndygW9fSvH9VCW7eE.jpg"
+                    src="{{ asset('images/products/brokoli-img.png') }}"
                     width="300" />
                 <h3 class="text-xl font-bold mb-2">
                     Brokoli
                 </h3>
                 <p>
-                    Brokoli (Brassica oleracea L. Kelompok Italica) adalah tanaman yang sering dibudidayakan.
+                    Brokoli merupakan sayuran hijau yang mengandung banyak serat, vitamin, dan mineral. Cocok diolah
+                    sebagai tumisan, dikukus, atau menjadi campuran sup sehat.
                 </p>
             </div>
+            
             <div class="bg-green-100 p-4 rounded-lg shadow-md">
-                <img alt="Sawi" class="w-full h-40 object-cover rounded-md mb-4" height="200"
-                    src="https://storage.googleapis.com/a1aa/image/BtNXlGyPdbobBRGkXKkZK67fRzgVIfYLLQq976yeZiupg1unA.jpg"
+                <img alt="Jagung" class="w-full h-40 object-cover rounded-md mb-4" height="200"
+                    src="{{ asset('images/products/jagung-img.png') }}"
                     width="300" />
                 <h3 class="text-xl font-bold mb-2">
-                    Sawi
+                    Jagung
                 </h3>
                 <p>
-                    Sawi adalah sekelompok tumbuhan dari genus Brassica yang dimanfaatkan daun atau bunganya sebagai
-                    bahan pangan.
+                    Jagung adalah bahan makanan kaya karbohidrat yang dapat dimakan langsung setelah direbus, dipanggang,
+                    atau menjadi bahan baku berbagai olahan seperti bakwan dan sup.
                 </p>
             </div>
+            
             <div class="bg-green-100 p-4 rounded-lg shadow-md">
-                <img alt="Pakcoy" class="w-full h-40 object-cover rounded-md mb-4" height="200"
-                    src="https://storage.googleapis.com/a1aa/image/WeCzefy07sZRWI2IEs1GkEwlYnMwDCNj2pEzVd9kkXOzg1unA.jpg"
+                <img alt="Kangkung" class="w-full h-40 object-cover rounded-md mb-4" height="200"
+                    src="{{ asset('images/products/kangkung-img.png') }}"
                     width="300" />
                 <h3 class="text-xl font-bold mb-2">
-                    Pakcoy
+                    Kangkung
                 </h3>
                 <p>
-                    Pakcoy atau bok choy (Brassica rapa Kelompok Chinensis; suku sawi-sawian atau Brassicaceae) adalah
-                    tanaman yang sering dibudidayakan.
+                    Kangkung adalah sayuran hijau yang populer di Indonesia. Biasanya dimasak menjadi tumis kangkung
+                    dengan bumbu bawang putih dan cabai.
+                </p>
+            </div>
+            
+            <div class="bg-green-100 p-4 rounded-lg shadow-md">
+                <img alt="Kol" class="w-full h-40 object-cover rounded-md mb-4" height="200"
+                    src="{{ asset('images/products/kol-img.png') }}"
+                    width="300" />
+                <h3 class="text-xl font-bold mb-2">
+                    Kol
+                </h3>
+                <p>
+                    Kol adalah sayuran serbaguna yang sering dijadikan bahan utama sup, lalapan, atau isian lumpia.
+                    Rasanya renyah dan kaya nutrisi.
+                </p>
+            </div>
+            
+            <div class="bg-green-100 p-4 rounded-lg shadow-md">
+                <img alt="Timun" class="w-full h-40 object-cover rounded-md mb-4" height="200"
+                    src="{{ asset('images/products/timun-img.png') }}"
+                    width="300" />
+                <h3 class="text-xl font-bold mb-2">
+                    Timun
+                </h3>
+                <p>
+                    Timun adalah sayuran yang segar, sering digunakan sebagai lalapan, acar, atau bahan salad. Kandungan
+                    airnya yang tinggi membuatnya sangat menyegarkan.
+                </p>
+            </div>
+            
+            <div class="bg-green-100 p-4 rounded-lg shadow-md">
+                <img alt="Tomat" class="w-full h-40 object-cover rounded-md mb-4" height="200"
+                    src="{{ asset('images/products/tomat-img.png') }}"
+                    width="300" />
+                <h3 class="text-xl font-bold mb-2">
+                    Tomat
+                </h3>
+                <p>
+                    Tomat adalah sayuran merah yang manis dan asam, cocok digunakan dalam berbagai hidangan seperti sup,
+                    jus, atau sambal. Tomat kaya akan vitamin C dan antioksidan.
                 </p>
             </div>
         </div>
